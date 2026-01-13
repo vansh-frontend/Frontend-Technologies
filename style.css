@@ -1,13 +1,17 @@
-/* ========== RESET ========== */
+/*  RESET  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ========== VARIABLES ========== */
+::-webkit-scrollbar{
+  width: 0;
+}
+
+/*  VARIABLES  */
 :root {
-  --bg: #ffffff;
+  --bg: #f8f8f8;
   --text: #0f172a;
   --muted: #64748b;
   --border: #e5e7eb;
@@ -15,7 +19,7 @@
   --accent: #111827;
 }
 
-/* ========== BASE ========== */
+/*  BASE  */
 body {
   font-family: "Inter", system-ui, sans-serif;
   background: var(--bg);
@@ -31,7 +35,7 @@ footer {
   margin: auto;
 }
 
-/* ========== HEADER ========== */
+/*  HEADER  */
 header {
   display: flex;
   justify-content: space-between;
@@ -57,14 +61,17 @@ nav ul {
 
 nav a {
   color: var(--muted);
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 nav a:hover {
   color: var(--accent);
 }
+#linkedin:hover {
+  color: #0a66c2;
+}
 
-/* ========== SECTIONS ========== */
+/*  SECTIONS  */
 section {
   margin-bottom: 64px;
 }
@@ -79,17 +86,42 @@ section p {
   max-width: 600px;
 }
 
-/* ========== FORM ========== */
+/*  FORM  */
 form {
   margin-top: 24px;
 }
 
-input {
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper i {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.input-wrapper input {
   width: 100%;
   padding: 14px 16px;
+  padding-left: 42px; /* 👈 cursor + text start here */
   border-radius: 10px;
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   font-size: 1rem;
+  outline: none;
+}
+
+.input-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+.input-wrapper input:focus {
+  border-color: var(--accent);
 }
 
 button {
@@ -105,8 +137,14 @@ button {
   align-items: center;
   gap: 8px;
 }
+button:hover{
+  background: #1f2937;
+}
+button:active {
+  transform: scale(0.98);
+}
 
-/* ========== OUTPUT BOXES ========== */
+/*  OUTPUT BOXES  */
 .cards {
   margin-top: 32px;
   display: grid;
@@ -148,7 +186,7 @@ button {
   word-break: break-word;
 }
 
-/* ========== FOOTER ========== */
+/*  FOOTER  */
 footer {
   border-top: 1px solid var(--border);
   padding-top: 32px;

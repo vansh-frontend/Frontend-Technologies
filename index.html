@@ -42,7 +42,7 @@
           </a>
         </li>
         <li>
-          <a href="https://linkedin.com/in/vanshdhalor" target="_blank" aria-label="LinkedIn">
+          <a href="https://linkedin.com/in/vanshdhalor" target="_blank" aria-label="LinkedIn" id="linkedin">
             <i class="fa-brands fa-linkedin"></i>
           </a>
         </li>
@@ -65,11 +65,15 @@
       <h2>Fetch API</h2>
 
       <form>
-        <input
-          type="url"
-          placeholder="https://jsonplaceholder.typicode.com/posts"
-          required
-        />
+       <div class="input-wrapper">
+  <i class="fa-solid fa-search"></i>
+  <input
+    type="url"
+    placeholder="https://jsonplaceholder.typicode.com/posts"
+    required
+  />
+</div>
+
         <button type="submit">
           <i class="fa-solid fa-cloud-arrow-down"></i>
           Fetch Data
